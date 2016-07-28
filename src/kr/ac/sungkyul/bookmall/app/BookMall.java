@@ -8,6 +8,7 @@ import kr.ac.sungkyul.bookmall.vo.AuthorVo;
 public class BookMall {
 
 	public static void main(String[] args) {
+		testAuthorDaoInsert();
 		testAuthorDaoGetList();
 		
 	}
@@ -19,5 +20,14 @@ public class BookMall {
 		for( AuthorVo vo : list ) {
 			System.out.println( vo );
 		}
+	}
+	
+	public static void testAuthorDaoInsert() {
+		AuthorVo vo = new AuthorVo();
+		vo.setName( "플라톤" );
+		vo.setDescription( "" );
+		
+		AuthorDao dao = new AuthorDao();
+		dao.insert(vo);
 	}
 }
