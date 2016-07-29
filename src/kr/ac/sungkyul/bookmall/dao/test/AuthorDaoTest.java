@@ -22,11 +22,21 @@ public class AuthorDaoTest {
 	}
 	
 	public static void testAuthorDaoInsert() {
+		AuthorDao dao = new AuthorDao();
+
 		AuthorVo vo = new AuthorVo();
 		vo.setName( "플라톤" );
 		vo.setDescription( "" );
+		dao.insert(vo);
 		
-		AuthorDao dao = new AuthorDao();
+		vo = new AuthorVo();
+		vo.setName( "박경리" );
+		vo.setDescription( "토지저자" );
+		dao.insert(vo);
+		
+		vo = new AuthorVo();
+		vo.setName( "공자" );
+		vo.setDescription( "" );
 		dao.insert(vo);
 	}
 }

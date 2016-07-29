@@ -27,13 +27,13 @@ public class BookDaoTest {
 		BookVo vo = new BookVo();
 		vo.setTitle( "향연" );
 		vo.setRate( 1 );
-		vo.setAuthorNo( 7L );
+		vo.setAuthorNo( 1L );
 		dao.insert(vo);
 		
 		vo = new BookVo();
 		vo.setTitle( "맹자" );
 		vo.setRate( 1 );
-		vo.setAuthorNo( 6L );
+		vo.setAuthorNo( 3L );
 		dao.insert(vo);		
 	}
 }
