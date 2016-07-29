@@ -9,7 +9,7 @@ public class AuthorDaoTest {
 
 	public static void main(String[] args) {
 		//testAuthorDaoDeleteAll();
-		//testAuthorDaoInsert();
+		testAuthorDaoInsert();
 		testAuthorDaoGetList();
 
 		//testAuthorDaoDelete();
@@ -52,18 +52,33 @@ public class AuthorDaoTest {
 		AuthorDao dao = new AuthorDao();
 
 		AuthorVo vo = new AuthorVo();
-		vo.setName( "플라톤" );
+		vo.setName( "스테파니메이어" );
 		vo.setDescription( "" );
 		dao.insert(vo);
 		
 		vo = new AuthorVo();
-		vo.setName( "박경리" );
-		vo.setDescription( "토지저자" );
+		vo.setName( "조정래" );
+		vo.setDescription( "" );
 		dao.insert(vo);
 		
 		vo = new AuthorVo();
-		vo.setName( "공자" );
+		vo.setName( "김동인" );
 		vo.setDescription( "" );
 		dao.insert(vo);
+		
+		vo = new AuthorVo();
+		vo.setName( "김난도" );
+		vo.setDescription( "" );
+		dao.insert(vo);	
+		
+		vo = new AuthorVo();
+		vo.setName( "천상병" );
+		vo.setDescription( "" );
+		dao.insert(vo);
+
+		vo = new AuthorVo();
+		vo.setName( "원수연" );
+		vo.setDescription( "" );
+		dao.insert(vo);			
 	}
 }
