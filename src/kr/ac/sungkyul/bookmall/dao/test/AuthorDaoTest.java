@@ -8,10 +8,37 @@ import kr.ac.sungkyul.bookmall.vo.AuthorVo;
 public class AuthorDaoTest {
 
 	public static void main(String[] args) {
+		//testAuthorDaoDeleteAll();
 		//testAuthorDaoInsert();
 		testAuthorDaoGetList();
+
+		//testAuthorDaoDelete();
+		//testAuthorDaoUpdate();
 	}
 
+	public static void testAuthorDaoUpdate() {
+		AuthorDao dao = new AuthorDao();
+		
+		AuthorVo vo = new AuthorVo();
+		vo.setNo( 1L );
+		vo.setName( "플라톤2" );
+		vo.setDescription( "그리스 철학자" );
+		
+		dao.update(vo);
+	}
+	
+	public static void testAuthorDaoDeleteAll() {
+		AuthorDao dao = new AuthorDao();
+		int count = dao.delete();
+		System.out.println( "전체 삭제된 row 수:" + count );
+	}
+	
+	public static void testAuthorDaoDelete() {
+		AuthorDao dao = new AuthorDao();
+		int count = dao.delete( 2L );
+		System.out.println( "삭제된 row 수:" + count );
+	}
+	
 	public static void testAuthorDaoGetList(){
 		AuthorDao dao = new AuthorDao();
 		List<AuthorVo> list = dao.getList();
